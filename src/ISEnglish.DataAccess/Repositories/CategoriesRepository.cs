@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ISEnglish.DataAccess.Repositories
 {
-    public class CategoriesRepository : ICategoryRepository
+    public class CategoriesRepository : ICategoriesRepository
     {
         private readonly ISEnglishDbContext _context;
 
