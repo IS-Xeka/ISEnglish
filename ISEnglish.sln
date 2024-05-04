@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISEnglish", "ISEnglish\ISEn
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{EF9699B9-E04B-4813-A1C5-38A948CB203E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISEnglish.Domain.Core", "ISEnglish.Domain.Core\ISEnglish.Domain.Core.csproj", "{11CD88C8-21EA-4A16-8E8E-670E39C49653}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{9E5770A1-D85B-4435-AF35-B9E6CED4AF3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E5770A1-D85B-4435-AF35-B9E6CED4AF3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E5770A1-D85B-4435-AF35-B9E6CED4AF3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11CD88C8-21EA-4A16-8E8E-670E39C49653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11CD88C8-21EA-4A16-8E8E-670E39C49653}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11CD88C8-21EA-4A16-8E8E-670E39C49653}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11CD88C8-21EA-4A16-8E8E-670E39C49653}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -26,6 +32,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{9E5770A1-D85B-4435-AF35-B9E6CED4AF3E} = {381CB25E-E030-4775-BE9E-2A7FC8BF04C9}
 		{EF9699B9-E04B-4813-A1C5-38A948CB203E} = {381CB25E-E030-4775-BE9E-2A7FC8BF04C9}
+		{11CD88C8-21EA-4A16-8E8E-670E39C49653} = {EF9699B9-E04B-4813-A1C5-38A948CB203E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BE701893-4EA0-4092-9648-7721453F70CE}
