@@ -1,22 +1,39 @@
 html {
   font-size: 14px;
+  padding:0;
+  margin: 0;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
+.header{
+    display: flex;
+    justify-content:space-between;
+    align-content:center;
+    vertical-align:middle;
+    background-color: rgb(29, 29, 29);
+    .left-navbar
+    {
+        align-content: center;
+        vertical-align:middle;
+        .logo{
+            font-size: 3rem;
+            padding: 1rem;
+        }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
+        a{
+            padding: .5rem;
+            font-size: 2rem;
+            text-decoration: none;
+        }
+    }
+    .right-navbar {
+        align-content: center;
+        margin-right: 2rem;
+        vertical-align: middle;
+        a{
+            padding: .5rem;
+            font-size: 2rem;
+            text-decoration: none;
+        }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;
+    }
 }
