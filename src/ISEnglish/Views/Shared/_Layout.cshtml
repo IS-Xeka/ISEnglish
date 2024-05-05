@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,19 +9,31 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ISEnglish.styles.css" asp-append-version="true" />
 </head>
+
 <body>
     <header>
         <nav>
             <div class="header">
                 <div class="left-navbar">
-                    <span class="logo">IS English</span>
-                    <a href="#">HReading</a>
-                    <a href="#">LWords</a>
-                    <a href="#">DTests</a>
+                    <div class="logo">
+                        <a>
+                            <span class="first-text">IS</span>
+                            <span class="second-text"> English</span>
+                        </a>
+                    </div>
+                    <a href="#" class="line-animation">
+                        <span class="first-text">H</span><span class="second-text">Reading</span>
+                    </a>
+                    <a href="#" class="line-animation">
+                        <span class="first-text">L</span><span class="second-text">Words</span>
+                    </a>
+                    <a href="#" class="line-animation">
+                        <span class="first-text">D</span><span class="second-text">Tests</span>
+                    </a>
                 </div>
                 <div class="right-navbar">
-                    <a href="#">Login</a>
-                    <a href="#">Register</a>
+                    <a href="#" class="login-text">Login</a>
+                    <a href="#" class="register-text">Register</a>
                 </div>
             </div>
         </nav>
@@ -31,9 +44,22 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - ISEnglish - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer>
+        <div class="top-container">
+            <div class="foooter-top-text">
+                <span>CONTUCT US</span>
+                <span>FOLLOW US</span>
+            </div>
+            <p>
+                If you have a question about the Learn English Network
+                fill out our <span>Contact Form</span>, and we will get back to you asap.
+            </p>
+        </div>
+        <div class="bottom-container">
+            <div class="footer-logo">
+                <span class="first-text">IS</span><span class="second-text"> English</span>
+            </div>
+            <span class="copyriting-text">© Copyright - All Rights Reserved.</span>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -41,4 +67,5 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>
