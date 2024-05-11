@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CSharpFunctionalExtensions;
 
 namespace ISEnglish.Domain.Core.Models
 {
@@ -22,18 +18,16 @@ namespace ISEnglish.Domain.Core.Models
             Description = description;
         }
 
-        public static (Category category, string Error) Create(Guid id, string name, string description)
+        public static Result<Category> Create(Guid id, string name, string description)
         {
-            string error = string.Empty;
-
             if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(description))
             {
-                error = "Properties can not be Empty";
+                return Result.Failure<Category>("Properties can not be Empty");
             }
 
             var category = new Category(id, name, description);
 
-            return (category, error);
+            return Result.Success<Category>(category);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace ISEnglish.DataAccess.Repositories
                 .ToListAsync();
 
             var categories = categoryEntities
-                .Select(b => Category.Create(b.Id, b.Name, b.Description).category)
+                .Select(b => Category.Create(b.Id, b.Name, b.Description).Value)
                 .ToList();
 
             return categories;

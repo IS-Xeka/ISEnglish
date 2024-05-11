@@ -11,7 +11,6 @@ namespace ISEnglish.Controllers
 
         public HomeController(ILogger<HomeController> logger)
         {
-            _word = Word.Create(Guid.Empty, "f", "f", "f", "f");
             _logger = logger;
         }
 

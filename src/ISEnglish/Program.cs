@@ -1,4 +1,6 @@
 using ISEnglish.DataAccess;
+using ISEnglish.DataAccess.Repositories;
+using ISEnglish.Services.BL;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +13,9 @@ builder.Services.AddDbContext<ISEnglishDbContext>(
     {
         options.UseNpgsql(builder.Configuration.GetConnectionString(nameof(ISEnglishDbContext)));
     });
+
+builder.Services.AddScoped<IWordsService, WordsService>();
+builder.Services.AddScoped<IWordsRepository, WordsRepository>();
 
 var app = builder.Build();
 

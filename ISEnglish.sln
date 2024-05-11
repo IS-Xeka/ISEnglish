@@ -11,13 +11,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{02F74CA5-D8DD-437D-AED2-56661709459B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISEnglish.Domain.Core", "src\ISEnglish.Domain.Core\ISEnglish.Domain.Core.csproj", "{F6C1B164-6BE4-4AB1-BBE7-49E62DF7A1ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISEnglish.Domain.Core", "src\ISEnglish.Domain.Core\ISEnglish.Domain.Core.csproj", "{F6C1B164-6BE4-4AB1-BBE7-49E62DF7A1ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISEnglish.DataAccess", "src\ISEnglish.DataAccess\ISEnglish.DataAccess.csproj", "{7899FF1C-DCF1-4548-B5C1-6BE8C066D2F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISEnglish.DataAccess", "src\ISEnglish.DataAccess\ISEnglish.DataAccess.csproj", "{7899FF1C-DCF1-4548-B5C1-6BE8C066D2F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISEnglish.Services.Interfaces", "src\ISEnglish.Services.Interfaces\ISEnglish.Services.Interfaces.csproj", "{4F996DEE-F439-4A38-9176-0E075041E7B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISEnglish.Services.Interfaces", "src\ISEnglish.Services.Interfaces\ISEnglish.Services.Interfaces.csproj", "{4F996DEE-F439-4A38-9176-0E075041E7B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISEnglish.Domain.Interfaces", "src\ISEnglish.Domain.Interfaces\ISEnglish.Domain.Interfaces.csproj", "{ABC706F0-0224-4D1D-8375-B9A1219C3F69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISEnglish.Domain.Interfaces", "src\ISEnglish.Domain.Interfaces\ISEnglish.Domain.Interfaces.csproj", "{ABC706F0-0224-4D1D-8375-B9A1219C3F69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISEnglish.Services.BL", "src\ISEnglish.Services.BL\ISEnglish.Services.BL.csproj", "{9C6F00BC-92BA-4FE4-8D67-78FDB3E2C0AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{ABC706F0-0224-4D1D-8375-B9A1219C3F69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABC706F0-0224-4D1D-8375-B9A1219C3F69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABC706F0-0224-4D1D-8375-B9A1219C3F69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C6F00BC-92BA-4FE4-8D67-78FDB3E2C0AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C6F00BC-92BA-4FE4-8D67-78FDB3E2C0AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C6F00BC-92BA-4FE4-8D67-78FDB3E2C0AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C6F00BC-92BA-4FE4-8D67-78FDB3E2C0AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +60,7 @@ Global
 		{7899FF1C-DCF1-4548-B5C1-6BE8C066D2F9} = {9A79E345-4A0D-4CBD-B269-0A7B5E5F05A0}
 		{4F996DEE-F439-4A38-9176-0E075041E7B2} = {02F74CA5-D8DD-437D-AED2-56661709459B}
 		{ABC706F0-0224-4D1D-8375-B9A1219C3F69} = {42B8AD19-09FB-4F73-8E0B-64D2B45A0374}
+		{9C6F00BC-92BA-4FE4-8D67-78FDB3E2C0AD} = {02F74CA5-D8DD-437D-AED2-56661709459B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BE701893-4EA0-4092-9648-7721453F70CE}

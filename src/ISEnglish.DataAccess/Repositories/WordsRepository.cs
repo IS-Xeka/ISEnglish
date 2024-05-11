@@ -24,7 +24,7 @@ namespace ISEnglish.DataAccess.Repositories
                 .ToListAsync();
 
             var words = wordEntities
-                .Select(b => Word.Create(b.Id, b.RusTitle, b.EngTitle, b.Transcription, b.CategoryName).word)
+                .Select(b => Word.Create(b.Id, b.RusTitle, b.EngTitle, b.Transcription, b.CategoryName).Value)
                 .ToList();
 
             return words;
