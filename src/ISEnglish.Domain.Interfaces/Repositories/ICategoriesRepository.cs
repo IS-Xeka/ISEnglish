@@ -1,6 +1,6 @@
 ﻿using ISEnglish.Domain.Core.Models;
 
-namespace ISEnglish.DataAccess.Repositories
+namespace ISEnglish.Domain.Interfaces.Repositories
 {
     public interface ICategoriesRepository
     {

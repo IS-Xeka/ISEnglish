@@ -1,11 +1,13 @@
 ﻿using CSharpFunctionalExtensions;
+using System.ComponentModel.DataAnnotations;
 
 namespace ISEnglish.Domain.Core.Models
 {
     public class Category
     {
         public const int MAX_LENGTH = 50;
-        public Guid Id { get; }
+        [Key]
+        public Guid Id { get; set; }
 
         public string Name { get; } = string.Empty;
 

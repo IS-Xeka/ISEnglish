@@ -23,6 +23,7 @@
     <ProjectReference Include="..\ISEnglish.DataAccess\ISEnglish.DataAccess.csproj" />
     <ProjectReference Include="..\ISEnglish.Domain.Core\ISEnglish.Domain.Core.csproj" />
     <ProjectReference Include="..\ISEnglish.Domain.Interfaces\ISEnglish.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\ISEnglish.Infrastructure\ISEnglish.Infrastructure.csproj" />
     <ProjectReference Include="..\ISEnglish.Services.BL\ISEnglish.Services.BL.csproj" />
     <ProjectReference Include="..\ISEnglish.Services.Interfaces\ISEnglish.Services.Interfaces.csproj" />
   </ItemGroup>

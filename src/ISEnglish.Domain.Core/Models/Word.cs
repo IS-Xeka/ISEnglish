@@ -1,11 +1,13 @@
 ﻿using CSharpFunctionalExtensions;
+using System.ComponentModel.DataAnnotations;
 
 namespace ISEnglish.Domain.Core.Models
 {
     public class Word
     {
         public const int MAX_LENGTH = 50;
-        public Guid Id { get; }
+        [Key]
+        public Guid Id { get; set; }
 
         public string RusTitle { get; } = string.Empty;
         public string EngTitle { get; } = string.Empty;
@@ -22,6 +24,8 @@ namespace ISEnglish.Domain.Core.Models
             Transcription = transcription;
             CategoryName = categoryName;
         }
+
+        public Word() {   }
 
         public static Result<Word> Create(Guid id, string rusTitle, string engTitle, string transcription, string categoryName)
         {

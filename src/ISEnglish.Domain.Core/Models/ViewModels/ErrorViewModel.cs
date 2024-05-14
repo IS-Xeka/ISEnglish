@@ -1,4 +1,4 @@
-﻿namespace ISEnglish.Domain.Core.Models
+﻿namespace ISEnglish.Domain.Core.Models.ViewModels
 {
     public class ErrorViewModel
     {

@@ -10,5 +10,7 @@ namespace ISEnglish.DataAccess
 
         public DbSet<WordEntity> Words { get; set; }
         public DbSet<CategoryEntity> Categories { get; set; }
+        public DbSet<UserEntity> Users { get; set; }
+        public DbSet<TestEntity> Tests { get; set; }
     }
 }

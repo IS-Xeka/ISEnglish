@@ -3,6 +3,7 @@ using System;
 using ISEnglish.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ISEnglish.DataAccess.Migrations
 {
     [DbContext(typeof(ISEnglishDbContext))]
-    partial class ISEnglishDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240514110754_deleteRoles")]
+    partial class deleteRoles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -7,17 +7,14 @@ using System.Threading.Tasks;
 
 namespace ISEnglish.DataAccess.Entities
 {
-    public class WordEntity
+    public class UserEntity
     {
-        public const int MAX_LENGTH = 50;
-
         [Key]
         public Guid Id { get; set; }
+        public string UserName { get; set; }
 
-        public string RusTitle { get; set; }
-        public string EngTitle { get; set; }
+        public string Email { get; set; }
+        public string PasswordHash { get; set; }
 
-        public string Transcription { get; set; }
-        public string CategoryName { get; set; }
     }
 }

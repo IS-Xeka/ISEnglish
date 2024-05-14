@@ -1,4 +1,4 @@
-﻿namespace ISEnglishMVC.Contracts
+﻿namespace ISEnglishMVC.Contracts.Words
 {
     public record WordsResponse(
         Guid Id,

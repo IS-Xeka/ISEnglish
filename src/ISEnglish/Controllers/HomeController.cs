@@ -1,4 +1,6 @@
 using ISEnglish.Domain.Core.Models;
+using ISEnglish.Domain.Core.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -20,6 +22,7 @@ namespace ISEnglish.Controllers
             return View();
         }
 
+        [Authorize]
         public IActionResult Privacy()
         {
             return View();

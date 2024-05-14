@@ -1,5 +1,5 @@
-﻿using ISEnglish.DataAccess.Repositories;
-using ISEnglish.Domain.Core.Models;
+﻿using ISEnglish.Domain.Core.Models;
+using ISEnglish.Domain.Interfaces.Repositories;
 
 namespace ISEnglish.Services.BL
 {

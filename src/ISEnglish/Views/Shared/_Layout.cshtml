@@ -21,7 +21,7 @@
                             <span class="second-text"> English</span>
                         </a>
                     </div>
-                    <a href="#" class="line-animation">
+                    <a asp-controller="Home" asp-action="Privacy" class="line-animation">
                         <span class="first-text">H</span><span class="second-text">Reading</span>
                     </a>
                     <a href="#" class="line-animation">
@@ -32,8 +32,8 @@
                     </a>
                 </div>
                 <div class="right-navbar">
-                    <a href="#" class="login-text">Login</a>
-                    <a href="#" class="register-text">Register</a>
+                    <a asp-controller="Users" asp-action="Login" class="login-text">Login</a>
+                    <a asp-controller="Users" asp-action="Register" class="register-text">Register</a>
                 </div>
             </div>
         </nav>
