@@ -9,16 +9,14 @@ namespace ISEnglish.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly (Word, String) _word;
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
-
+        
         public IActionResult Index()
         {
-            Console.WriteLine(_word.Item2);
             return View();
         }
 

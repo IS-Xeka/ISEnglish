@@ -1,0 +1,71 @@
+@model ISEnglish.Domain.Core.Models.ViewModels.WordViewModel
+@{
+    ViewBag.Title = "Learn Words";
+    var Words = ViewBag.Words;
+}
+
+<div class="main-words">
+    <div class="side-nav">
+        <div class="col-md-12">
+            <form method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="RusTitle"></label>
+                    <input asp-for="RusTitle" class="form-control" type="text" />
+                    <span asp-validation-for="RusTitle" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="EngTitle"></label>
+                    <input asp-for="EngTitle" class="form-control" type="text"/>
+                    <span asp-validation-for="EngTitle" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Transcription"></label>
+                    <input asp-for="Transcription" class="form-control" type="text"/>
+                    <span asp-validation-for="Transcription" class="text-danger"></span>
+                </div>
+                <button type="submit" class="button-text"><span class="first-text">Add</span> word</button>
+            </form>
+        </div>
+        <ul>
+            <li><a asp-controller="Words">Learn <span class="second-text">words</span></a></li>
+            <li><a asp-controller="Words">Tests <span class="second-text">with words</span></a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="word-navbar">
+            <a>All words</a>
+            <form>
+                <label>Search</label>
+                <input type="text" class="search"/>
+            </form>
+        </div>
+        <div class="words-container">
+            <div class="rus-container">
+                <p>Russian</p>
+                <ul>
+                    @foreach(var word in Words){
+                        <li><input class="checkbox" type="checkbox"/> @word.RusTitle</li>
+                    }
+                </ul>
+            </div>
+            <div class="eng-container">
+                <p>English</p>
+                <ul>
+                    @foreach(var word in Words){
+                        <li>@word.EngTitle</li>
+                    }
+                </ul>
+            </div>
+            <div class="transc-container">
+                <p>Transcription</p>
+                <ul>
+                    @foreach(var word in Words){
+                        <li>@word.Transcription <form asp-controller="Words" method="post"><input class="del-input" type="submit" value="Delete" asp-route-id="@word.Id" asp-action="DeleteWord" /></form></li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>

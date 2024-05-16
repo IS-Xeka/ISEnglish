@@ -18,12 +18,6 @@ namespace ISEnglish.DataAccess.Configurations
             builder.Property(b => b.EngTitle)
                 .IsRequired()
                 .HasMaxLength(Word.MAX_LENGTH);
-
-            builder.Property(b => b.Transcription)
-                .IsRequired();
-
-            builder.Property(b => b.CategoryName)
-                .IsRequired();
         }
     }
 }

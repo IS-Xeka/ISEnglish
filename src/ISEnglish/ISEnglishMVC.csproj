@@ -10,6 +10,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="src\Images\**" />
+    <Content Remove="src\Images\**" />
+    <EmbeddedResource Remove="src\Images\**" />
+    <None Remove="src\Images\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="CSharpFunctionalExtensions" Version="2.42.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4">
       <PrivateAssets>all</PrivateAssets>
@@ -26,6 +33,15 @@
     <ProjectReference Include="..\ISEnglish.Infrastructure\ISEnglish.Infrastructure.csproj" />
     <ProjectReference Include="..\ISEnglish.Services.BL\ISEnglish.Services.BL.csproj" />
     <ProjectReference Include="..\ISEnglish.Services.Interfaces\ISEnglish.Services.Interfaces.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\img\9UGATU.jpg" />
+    <None Include="wwwroot\img\mercedes-amg-gt-r_4096x2731_zftzg.jpeg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\bootstrap\dist\css\" />
   </ItemGroup>
 
 </Project>
