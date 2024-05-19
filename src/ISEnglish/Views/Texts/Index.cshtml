@@ -1,0 +1,49 @@
+﻿@model ISEnglish.Domain.Core.Models.ViewModels.TextViewModel
+@{
+    ViewBag.Title = "Home reading";
+    var Texts = ViewBag.Texts;
+    var Text = ViewBag.Text;
+}
+
+<div class="main-texts">
+    <div class="side-nav">
+        @* <div class="col-md-12">
+            <form method="post" asp-action="CreateText">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name" class="form-control" type="text" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Content"></label>
+                    <input asp-for="Content" class="form-control" type="text" />
+                </div>
+                <button type="submit" class="button-text"><span class="first-text">Add</span> text</button>
+            </form>
+        </div> *@
+        <ul>
+            @foreach(var text in Texts)
+            {
+                <li>
+                    <form asp-controller="Texts" method="get">
+                        <input class="text-input" type="submit" value="@text.Name" asp-route-id="@text.Id" asp-action="Index" />
+                    </form>
+                </li>
+            }
+        </ul>
+    </div>
+    <div class="content">
+        <div class="text-container">
+            @if(Text != null)
+                {
+                    <p class="text-name">
+                        @Text.Name
+                    </p>
+                    <p class="text-content">
+                        @Text.Content;
+                    </p>
+                }
+        </div>
+    </div>
+
+</div>

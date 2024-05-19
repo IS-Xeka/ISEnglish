@@ -93,7 +93,7 @@ footer{
         .foooter-top-text{
             display: flex;
             justify-content: space-between;
-            margin-left: 277px;
+            margin-left: 300px;
             margin-right: 1000px;
             span{
                 font-size: 25px;
@@ -104,7 +104,7 @@ footer{
 
         p{
             margin-top: 20px;
-            margin-left: 277px;
+            margin-left: 300px;
             font-size: 18px;
             color: #FFFFFF;
             width: 555px;
@@ -119,7 +119,7 @@ footer{
         vertical-align: middle;
 
         .footer-logo{
-            margin-left: 277px;
+            margin-left: 300px;
             margin-right: 100px;
         }
 
@@ -274,7 +274,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 383px;
+    height: 440px;
     .login-text{
         text-align: center;
         width: 321px;
@@ -298,7 +298,7 @@ footer{
 
     .col-md-12{
         background-color: #1D1D1D;
-        height: 300px;
+        height: 340px;
         background-color: rgba(29, 29, 29, 0.9);
         -webkit-backdrop-filter: blur(20px);
                 backdrop-filter: blur(20px);
@@ -334,7 +334,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 383px;
+    height: 440px;
     .register-text{
         text-align: center;
         width: 321px;
@@ -358,7 +358,7 @@ footer{
 
     .col-md-12{
         background-color: #1D1D1D;
-        height: 300px;
+        height: 340px;
         background-color: rgba(29, 29, 29, 0.9);
         -webkit-backdrop-filter: blur(20px);
                 backdrop-filter: blur(20px);
@@ -493,6 +493,7 @@ footer{
 
 .main-words {
     background-color: #F5F5F5;
+    min-height: 540px;
     height: 100%;
     .side-nav{
         height: 100%;
@@ -657,11 +658,22 @@ footer{
                 min-width: 300px;
             }
 
-            .transc-container{
+            .transc-container {
                 border: 2px;
                 border-style: solid;
                 border-color: #1D1D1D;
-                min-width: 300px
+                min-width: 300px;
+
+                .form-width{
+                               display: flex;
+                               justify-content: space-between;
+                               
+                               .del-input{
+                                            margin-right: 8px;
+                                            background-color: #1D1D1D;
+                                            color: #FFD600;
+                                        }
+                           }
 
             }
             ul{
@@ -679,6 +691,7 @@ footer{
                     height: 20px;
                     width: 20px;
                 }
+
                 
             }
             p{
@@ -691,5 +704,128 @@ footer{
         }
     }
 
+}
+
+.main-texts {
+    background-color: #F5F5F5;
+    min-height: 540px;
+    height: 100%;
+}
+
+.main-texts .side-nav {
+    height: 100%;
+    width: 270px;
+    position: absolute;
+    z-index: 1;
+    background-color: #1D1D1D;
+    overflow-x: hidden;
+    padding-top: 20px;
+    border-style: solid;
+    border-left: 1px;
+    border-bottom: 1px;
+    border-color: #F5F5F5;
+}
+
+.main-texts .side-nav .col-md-12 {
+    background-color: rgba(29, 29, 29, 0.9);
+    height: 250px;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 8px;
+    -webkit-box-shadow: 20px 20px 22px rgba(0,0,0,0.2);
+    box-shadow: 20px 20px 22px rgba(0,0,0,0.2);
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-texts .side-nav .col-md-12 label {
+    color: #FFD600;
+    padding: 5px;
+}
+
+.main-texts .side-nav .col-md-12 .form-group {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    margin-left: 30px;
+}
+
+.main-texts .side-nav .col-md-12 .button-text {
+    color: #FFFFFF;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.main-texts .side-nav .col-md-12 button {
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 200px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #000000;
+    text-align: center;
+    transition: ease all 0.3s;
+}
+
+.main-texts .side-nav .col-md-12 button:hover {
+    /* Стили для :hover должны быть переписаны без использования SASS переменных и функций */
+}
+
+.main-texts .side-nav .col-md-12 button:active {
+    /* Стили для :active должны быть переписаны без использования SASS переменных и функций */
+}
+
+.main-texts .side-nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+.main-texts .side-nav ul li {
+    width: 250px;
+    border-radius: 10px;
+    margin: auto;
+    padding: 10px;
+    background-color: #000000;
+    text-align: center;
+    transition: ease all 0.3s;
+}
+
+.main-texts .side-nav ul li form {
+    height: 40px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-texts .side-nav ul li form .text-input {
+    width: 100%;
+    display: flex;
+    font-size: 18px;
+}
+
+.main-texts .content {
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.main-texts .content .text-container {
+    
+}
+
+.main-texts .content .text-container .text-name {
+    font-size: 36px;
+}
+
+.main-texts .content .text-container .text-content {
+    color: #000000;
+    font-size: 24px;
 }
 

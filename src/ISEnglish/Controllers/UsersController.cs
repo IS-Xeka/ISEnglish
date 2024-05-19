@@ -89,5 +89,10 @@ namespace ISEnglishMVC.Controllers
             return Ok(response);
 
         }
+
+    //     public IActionResult<bool> IsLogin(){
+    //         bool result = false;
+    //         System.Console.WriteLine(Response.Cookies.ToString);
+    //     }
     }
 }

@@ -7,6 +7,8 @@ using ISEnglish.Services.BL;
 using ISEnglishMVC.Extensions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.CookiePolicy;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.CodeAnalysis.Options;
 using Microsoft.EntityFrameworkCore;
@@ -31,6 +33,7 @@ builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection(nameof(J
 builder.Services.AddScoped<IWordsService, WordsService>();
 builder.Services.AddScoped<IWordsRepository, WordsRepository>();
 builder.Services.AddScoped<IUsersRepository, UsersRepository>();
+builder.Services.AddScoped<ITextsRepository, TextsRepository>();
 
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<JwtOptions>();
@@ -38,6 +41,7 @@ builder.Services.AddScoped<JwtOptions>();
 builder.Services.AddScoped<IJwtProvider, JwtProvider>();
 builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ITextsService, TextsService>();
 
 var provider = builder.Services.BuildServiceProvider();
 var configurations = provider.GetRequiredService<IConfiguration>();
@@ -76,6 +80,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 });
 
 builder.Services.AddAuthorization();
+builder.Services.ConfigureApplicationCookie(options => options.LoginPath = "/Users/Login");
 
 var app = builder.Build();
 
@@ -92,14 +97,21 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseStatusCodePages(async statusCodeContext =>
+{
+    var response = statusCodeContext.HttpContext.Response;
+    var path = statusCodeContext.HttpContext.Request.Path;
 
-//app.UseCookiePolicy(new CookiePolicyOptions
-//{
-//    MinimumSameSitePolicy = SameSiteMode.Strict,
-//    HttpOnly = HttpOnlyPolicy.Always,
-//    Secure = CookieSecurePolicy.Always
-//});
-
+    response.ContentType = "text/plain; charset=UTF-8";
+    if (response.StatusCode == 401)
+    {
+        response.Redirect("/Users/Login");
+    }
+    else if (response.StatusCode == 404)
+    {
+        await response.WriteAsync($"Resource {path} Not Found");
+    }
+});
 app.UseAuthentication();
 app.UseAuthorization();
 

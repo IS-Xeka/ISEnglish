@@ -8,14 +8,18 @@ using System.Threading.Tasks;
 namespace ISEnglish.Domain.Core.Models.ViewModels
 {
     public class WordViewModel
-    {
-        
-        public string? Transcription {get; set;} = string.Empty;
-        [Required]
-        [MinLength(1)]
-        public string RusTitle { get; set; } = string.Empty;
-        [Required]
-        [MinLength(1)]
-        public string EngTitle { get; set; } = string.Empty;
+    {   
+        [DataType(DataType.Text)]
+        public string ? Transcription {get; set;}
+        [Required(ErrorMessage = "None")]
+        [DataType(DataType.Text)]
+        [StringLength(80, MinimumLength = 1)]
+        public string RusTitle { get; set; }
+        [Required(ErrorMessage = "None")]
+        [DataType(DataType.Text)]
+        [StringLength(80, MinimumLength = 1)]
+        public string EngTitle { get; set; }
+
+
     }
 }

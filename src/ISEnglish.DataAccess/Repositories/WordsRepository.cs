@@ -1,5 +1,6 @@
 ﻿using ISEnglish.DataAccess.Entities;
 using ISEnglish.Domain.Core.Models;
+using ISEnglish.Domain.Core.Models.ViewModels;
 using ISEnglish.Domain.Interfaces.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System;
